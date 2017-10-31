@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Hello World!",
+  "version": "0.1",
+  "description": "My first Chrome Extention",
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["jquery.js", "content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "*://*/*"
+  ]
+}
